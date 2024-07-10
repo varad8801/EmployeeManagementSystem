@@ -1,0 +1,136 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #343a40; /* Dark background for header */
+    color: #ffffff; /* White text color */
+    padding: 1.5rem 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header nav .nav-link {
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+}
+
+header nav .nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Main content styling */
+main {
+    background-color: #ffffff; /* White background for the main content */
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Dashboard Card Styling */
+.card {
+    border-radius: 8px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+}
+
+.card-text {
+    font-size: 1.25rem;
+}
+
+/* Chart Styling */
+canvas {
+    height: 300px;
+    max-width: 100%;
+}
+
+/* Summary Statistics */
+.card.bg-primary {
+    background-color: #007bff;
+}
+
+.card.bg-success {
+    background-color: #28a745;
+}
+
+.card.bg-warning {
+    background-color: #ffc107;
+}
+
+.card.bg-danger {
+    background-color: #dc3545;
+}
+
+/* Recent Activities */
+#recentActivities li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#recentActivities li:last-child {
+    border-bottom: none;
+}
+
+/* Additional custom styles */
+.table-responsive {
+    margin-top: 20px;
+}
+
+.table thead th {
+    font-size: 1.1rem;
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.table tbody td {
+    font-size: 1rem;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Navbar */
+.nav-link {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Navbar hover effect */
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}

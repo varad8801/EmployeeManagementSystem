@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Employee</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Delete Employee</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="employees.html">View All Employees</a></li>
+                <li><a href="addEmployee.html">Add New Employee</a></li>
+                <li><a href="updateEmployee.html">Update Employee</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Delete Employee</h2>
+            <form id="deleteEmployeeForm">
+                <label for="empName">Employee Name:</label>
+                <input type="text" id="empName" name="empName" required><br><br>
+                <button type="submit">Delete Employee</button>
+            </form>
+            <div id="responseMessage"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Employee Management System</p>
+    </footer>
+    <script>
+        $(document).ready(function() {
+            $('#deleteEmployeeForm').on('submit', function(event) {
+                event.preventDefault();
+
+                const empName = [$('#empName').val()];
+
+                $.ajax({
+                    url: '/employee/delete',
+                    method: 'DELETE',
+                    contentType: 'application/json',
+                    data: JSON.stringify(empName), // Wrap empName in an array
+                    success: function(response) {
+                        $('#responseMessage').html('<p>Employee(s) deleted successfully!</p>');
+                        $('#deleteEmployeeForm')[0].reset(); // Reset the form fields
+                    },
+                    error: function(xhr, status, error) {
+                        $('#responseMessage').html('<p>Error deleting employee(s): ' + xhr.responseText + '</p>');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
