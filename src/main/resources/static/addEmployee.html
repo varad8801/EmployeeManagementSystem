@@ -30,6 +30,38 @@
                     <label for="empDesignation">Employee Designation:</label>
                     <input type="text" class="form-control" id="empDesignation" name="empDesignation" required>
                 </div>
+                <div class="form-group">
+                    <label for="empDepartment">Employee Department:</label>
+                    <input type="text" class="form-control" id="empDepartment" name="empDepartment" required>
+                </div>
+                <div class="form-group">
+                    <label for="empEmailId">Employee Email ID:</label>
+                    <input type="email" class="form-control" id="empEmailId" name="empEmailId" required>
+                </div>
+                <div class="form-group">
+                    <label for="phNo">Phone Number:</label>
+                    <input type="tel" class="form-control" id="phNo" name="phNo" required>
+                </div>
+                <div class="form-group">
+                    <label for="empDOJ">Date of Joining:</label>
+                    <input type="date" class="form-control" id="empDOJ" name="empDOJ" required>
+                </div>
+                <div class="form-group">
+                    <label for="empDOB">Date of Birth:</label>
+                    <input type="date" class="form-control" id="empDOB" name="empDOB" required>
+                </div>
+                <div class="form-group">
+                    <label for="empAddress">Address:</label>
+                    <input type="text" class="form-control" id="empAddress" name="empAddress" required>
+                </div>
+                <div class="form-group">
+                    <label for="emergencyContact">Emergency Contact Number:</label>
+                    <input type="tel" class="form-control" id="emergencyContact" name="emergencyContact" required>
+                </div>
+                <div class="form-group">
+                    <label for="managerId">Manager ID:</label>
+                    <input type="number" class="form-control" id="managerId" name="managerId" required>
+                </div>
                 <button type="submit" class="btn btn-primary">Add Employee</button>
             </form>
             <div id="responseMessage" class="mt-3"></div>
@@ -39,30 +71,6 @@
         <p>&copy; 2024 Employee Management System</p>
     </footer>
 
-    <script>
-        $(document).ready(function() {
-            $('#addEmployeeForm').on('submit', function(event) {
-                event.preventDefault();
-
-               // const empId = $('#empId').val();
-                const empName = $('#empName').val();
-                const empDesignation = $('#empDesignation').val();
-
-                $.ajax({
-                    url: '/employee/add',
-                    method: 'POST',
-                    contentType: 'application/json',
-                    data: JSON.stringify([{ empName, empDesignation }]),
-                    success: function(response) {
-                        $('#responseMessage').html('<p>Employee added successfully!</p>');
-                        $('#addEmployeeForm')[0].reset(); // Reset the form fields
-                    },
-                    error: function(xhr, status, error) {
-                        $('#responseMessage').html('<p>Error adding employee: ' + xhr.responseText + '</p>');
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="js/addEmployee.js"></script> <!-- Link to the new JavaScript file -->
 </body>
 </html>

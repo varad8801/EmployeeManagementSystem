@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const logoutButton = document.querySelector('#logoutButton');
     if (logoutButton) {
         logoutButton.addEventListener('click', function(event) {
-          //  event.preventDefault();  // Prevent the default button action
+            event.preventDefault();  // Prevent the default button action
 
             // Call the /logout endpoint to log out the user
             fetch('/logout', {
