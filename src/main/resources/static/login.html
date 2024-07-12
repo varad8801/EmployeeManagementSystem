@@ -4,64 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .login-container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .login-container h1 {
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
-        .login-container form {
-            display: flex;
-            flex-direction: column;
-        }
-        .login-container label {
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .login-container input {
-            margin-bottom: 10px;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .login-container button {
-            padding: 10px;
-            font-size: 16px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .login-container button:hover {
-            background-color: #218838;
-        }
-        .login-container .register-link {
-            margin-top: 10px;
-            text-align: center;
-        }
-        .login-container .error-message {
-            color: red;
-            margin-bottom: 10px;
-        }
-    </style>
-    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="/js/auth.js"></script> -->
 </head>
 <body>
+    
     <div class="login-container">
         <h1>Login</h1>
         <form action="/login" method="post">
@@ -79,5 +29,6 @@
             <a href="/register">Don't have an account? Register here</a>
         </div>
     </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
