@@ -19,7 +19,7 @@ public class LogController {
 	@Autowired
 	LogService logser;
 	@GetMapping("getlogs")
-	@ResponseBody
+	//@ResponseBody
 	public List<Log> getlogs(){
 		System.out.println(logser.getlogs());
 		return logser.getlogs();

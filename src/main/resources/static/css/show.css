@@ -54,6 +54,11 @@ footer p {
     font-size: 1rem;
 }
 
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* Additional custom styles */
 .nav-link:hover {
     text-decoration: underline;

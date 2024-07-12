@@ -24,21 +24,21 @@ public class EmployeeController {
 	@Autowired
 	EmployeeService empser;
 	@GetMapping("allEmployees")
-	@ResponseBody
+	//@ResponseBody
 	public List<Employee> allEmployees(){
 		//System.out.println(empser.allEmployees());
 		return empser.allEmployees();
 	}
 	
 	@GetMapping("getempById")
-	@ResponseBody
+	//@ResponseBody
 	public Optional<Employee> getempById(@RequestBody Map<String, String> request){
 		int empId = Integer.parseInt( request.get("empId"));
 		return empser.getempById(empId);
 	}
 	
 	@GetMapping("getempByName")
-	@ResponseBody
+	//@ResponseBody
 	public List<Employee> getempByName(@RequestBody Map<String, String> request){
 		String empName = request.get("empName");
 		return empser.getempByName(empName);
@@ -47,7 +47,7 @@ public class EmployeeController {
 	
 	@PostMapping("add")
 	public String addEmployee(@RequestBody List<Employee> employees) {
-		//System.out.println(">>"+employees);
+		System.out.println(">>"+employees);
 		return empser.addEmployee(employees);
 	}  
 	
